@@ -1,13 +1,16 @@
 import { Stack } from '@mui/material';
 import React from 'react';
+import burgerBanner from '../../Assets/burger-banner.jpg'
+import pizzaBanner from '../../Assets/pizza-banner.jpg'
+import tacosBanner from '../../Assets/tacos-banner.jpg'
 
 export default function Adds() {
     return (
         <div className='adds'>
             <Stack spacing={0}>
-                <img src="https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60" />
-                <img src="https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60" />
-                <img src="https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60" />
+                <img src={burgerBanner} />
+                <img src={pizzaBanner} />
+                <img src={tacosBanner} />
             </Stack>
         </div>
     )
