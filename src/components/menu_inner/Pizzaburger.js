@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { Paper, Stack } from '@mui/material';
-import pizza from '../../Assets/pizza.png';
-import burger from '../../Assets/burger.png';
+import pizza from '../../assets/pizza.png';
+import burger from '../../assets/burger.png';
 
 export default function Pizza_Burger() {
 

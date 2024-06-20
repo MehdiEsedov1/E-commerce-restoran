@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { Paper, Stack } from '@mui/material';
-import salad from '../../Assets/salad.png';
-import souz from '../../Assets/souz.png';
+import salad from '../../assets/salad.png';
+import souz from '../../assets/souz.png';
 
 export default function Souce_salad() {
 

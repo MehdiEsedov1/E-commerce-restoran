@@ -1,4 +1,4 @@
-import './App.css';
+import './app.css';
 import './styles/adds.css';
 import './styles/homepage.css';
 import './styles/footer.css';

@@ -109,7 +109,7 @@ export default function Basket() {
                         )
                     })}
                 </Grid>
-                : console.error("mealDatas bosdur!!!")
+                : console.error("mealDatas is empty!!!")
             }
         </div>
     )
