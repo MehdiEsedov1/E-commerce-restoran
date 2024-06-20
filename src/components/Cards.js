@@ -38,11 +38,11 @@ export default function Cards(props) {
           setMealDatas(respond.data[5].Drinks);
         }
         else {
-          console.error("Yoxdur !!!");
+          console.error("Empty!!!");
         }
       }
       catch (error) {
-        console.error("JSON fayilinda bele bir deyer yoxdur!!!");
+        console.error("There is nothing like this in JSON!!!");
       }
     }
 
@@ -116,7 +116,7 @@ export default function Cards(props) {
             )
           })}
         </Grid>
-        : console.error("mealDatas bosdur!!!")
+        : console.error("mealDatas is empty!!!")
       }
       <Mysnackbar status={statusSnackbar} handleClick={handleClick} />
     </div >

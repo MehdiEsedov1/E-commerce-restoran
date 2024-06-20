@@ -11,16 +11,16 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
     {
-        imgPath: require('../../Assets/burger-banner.jpg'),
+        imgPath: require('../../assets/burger-banner.jpg'),
     },
     {
-        imgPath: require('../../Assets/hot-dog-banner.jpg')
+        imgPath: require('../../assets/hot-dog-banner.jpg')
     },
     {
-        imgPath: require('../../Assets/pizza-banner.jpg')
+        imgPath: require('../../assets/pizza-banner.jpg')
     },
     {
-        imgPath: require('../../Assets/tacos-banner.jpg')
+        imgPath: require('../../assets/tacos-banner.jpg')
     },
 ];
 

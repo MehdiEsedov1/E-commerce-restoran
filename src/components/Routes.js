@@ -3,23 +3,23 @@ import Home from '../components/Home';
 import Menu from '../components/Menu';
 import About from '../components/About';
 import Basket from '../components/Basket';
-import AboutMeal from './AboutMeal';
+import Aboutmeal from './Aboutmeal';
 
 import Error from '../components/Error';
 
-import SignUp from './Registration/SignUp';
-import LogIn from './Registration/LogIn';
+import Signup from './registration/Signup';
+import Login from './registration/Login';
 import Profile from './Profile';
 
-import Pizza_Burger from '../components/MenuInner/Pizza-Burger';
-import Drinks from '../components/MenuInner/Drinks';
-import Souce_salad from '../components/MenuInner/Souce-salad';
+import Pizzaburger from './menu_inner/Pizzaburger';
+import Drinks from './menu_inner/Drinks';
+import Soucesalad from './menu_inner/Soucesalad';
 
-import Burger from '../components/MenuInner/Burger';
-import Dessert from '../components/MenuInner/Dessert';
-import Pizza from '../components/MenuInner/Pizza';
-import Salad from '../components/MenuInner/Salad';
-import Souce from '../components/MenuInner/Souce';
+import Burger from './menu_inner/Burger';
+import Dessert from './menu_inner/Dessert';
+import Pizza from './menu_inner/Pizza';
+import Salad from './menu_inner/Salad';
+import Souce from './menu_inner/Souce';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -34,7 +34,7 @@ export default function Routess() {
                         <Route index element={<Dessert />} />
                     </Route>
                     <Route path='pizza-Burger'>
-                        <Route index element={<Pizza_Burger />} />
+                        <Route index element={<Pizzaburger />} />
                         <Route path='pizza' element={<Pizza />} />
                         <Route path='burger' element={<Burger />} />
                     </Route>
@@ -42,16 +42,16 @@ export default function Routess() {
                         <Route index element={<Drinks />} />
                     </Route>
                     <Route path='saucesalad'>
-                        <Route index element={<Souce_salad />} />
+                        <Route index element={<Soucesalad />} />
                         <Route path='souce' element={<Souce />} />
                         <Route path='salad' element={<Salad />} />
                     </Route>
-                    <Route path=':mID' element={<AboutMeal />} />
+                    <Route path=':mID' element={<Aboutmeal />} />
                 </Route>
                 <Route path='/about' element={<About />} />
                 <Route path='/basket' element={<Basket />} />
-                <Route path='/signup' element={<SignUp />} />
-                <Route path='/login' element={<LogIn />} />
+                <Route path='/signup' element={<Signup />} />
+                <Route path='/login' element={<Login />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='*' element={<Error />} />
             </Routes>

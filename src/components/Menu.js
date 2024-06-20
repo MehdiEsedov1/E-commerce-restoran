@@ -1,12 +1,12 @@
 import { Paper, Stack } from '@mui/material';
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import pizza from '../Assets/pizza.png';
-import salad from '../Assets/salad.png';
-import sweets from '../Assets/sweets.png';
-import water from '../Assets/water.png';
-import burger from '../Assets/burger.png';
-import souz from '../Assets/souz.png';
+import pizza from '../assets/pizza.png';
+import salad from '../assets/salad.png';
+import sweets from '../assets/sweets.png';
+import water from '../assets/water.png';
+import burger from '../assets/burger.png';
+import souz from '../assets/souz.png';
 
 export default function Menu() {
 

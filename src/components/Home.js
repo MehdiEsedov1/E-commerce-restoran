@@ -1,7 +1,7 @@
 import React from 'react';
-import SwipeableTextMobileStepper from './HomePage/Carousel.js';
-import Adds from './HomePage/Adds.js';
-import Footer from './HomePage/Footer.js';
+import SwipeableTextMobileStepper from './home_page/Carousel.js';
+import Adds from './home_page/Adds.js';
+import Footer from './home_page/Footer.js';
 
 export default function Home() {
   return (

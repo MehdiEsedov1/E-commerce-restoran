@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../../Assets/logo.png';
+import logo from '../../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 
-export default function LogIn() {
+export default function Login() {
 
   const navigator = useNavigate();
 

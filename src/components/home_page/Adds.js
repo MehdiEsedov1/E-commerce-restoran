@@ -1,8 +1,8 @@
 import { Stack } from '@mui/material';
 import React from 'react';
-import burgerBanner from '../../Assets/burger-banner.jpg'
-import pizzaBanner from '../../Assets/pizza-banner.jpg'
-import tacosBanner from '../../Assets/tacos-banner.jpg'
+import burgerBanner from '../../assets/burger-banner.jpg'
+import pizzaBanner from '../../assets/pizza-banner.jpg'
+import tacosBanner from '../../assets/tacos-banner.jpg'
 
 export default function Adds() {
     return (

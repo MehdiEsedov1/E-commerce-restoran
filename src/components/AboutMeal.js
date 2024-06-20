@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function AboutMeal() {
+export default function Aboutmeal() {
   const { mID } = useParams();
   const [mealData, setMealData] = useState(null);
 

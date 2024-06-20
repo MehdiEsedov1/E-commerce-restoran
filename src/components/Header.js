@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import '../styles/Header.css';
-import logo from '../Assets/logo.png';
+import '../styles/header.css';
+import logo from '../assets/logo.png';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 import { styled } from '@mui/material/styles';
