@@ -17,7 +17,7 @@ export default function Basket() {
 
     useEffect(() => {
         async function getMealFromBaskter() {
-            const data = await axios("http://localhost:3000/basket");
+            const data = await axios("http://localhost:3001/basket");
             setMealDatas(data.data);
         }
 
@@ -25,7 +25,7 @@ export default function Basket() {
     }, [deleteStatus]);
 
     async function deleteFromBasket(id) {
-        await axios.delete(`http://localhost:3000/basket/${id}`);
+        await axios.delete(`http://localhost:3001/basket/${id}`);
         if (deleteStatus) {
             setDeleteStatus(false);
         }
@@ -48,7 +48,7 @@ export default function Basket() {
 
     async function handleClick(enteredNumbers, meal) {
 
-        await axios.patch(`http://localhost:3000/basket/1`, {
+        await axios.patch(`http://localhost:3001/basket/1`, {
             'count': enteredNumbers[meal.id]
         });
     }

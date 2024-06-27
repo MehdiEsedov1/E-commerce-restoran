@@ -3,23 +3,18 @@ import Home from '../components/Home';
 import Menu from '../components/Menu';
 import About from '../components/About';
 import Basket from '../components/Basket';
-import Aboutmeal from './Aboutmeal';
+import Aboutmeal from './AboutMeal';
 
 import Error from '../components/Error';
 
-import Signup from './registration/Signup';
-import Login from './registration/Login';
+import Signup from './registration/SignUp';
+import Login from './registration/LogIn';
 import Profile from './Profile';
 
 import Pizzaburger from './menu_inner/Pizzaburger';
-import Drinks from './menu_inner/Drinks';
 import Soucesalad from './menu_inner/Soucesalad';
 
-import Burger from './menu_inner/Burger';
-import Dessert from './menu_inner/Dessert';
-import Pizza from './menu_inner/Pizza';
-import Salad from './menu_inner/Salad';
-import Souce from './menu_inner/Souce';
+import Cards from './Cards';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -31,20 +26,20 @@ export default function Routess() {
                 <Route path='/menu'>
                     <Route index element={<Menu />} />
                     <Route path='dessert' >
-                        <Route index element={<Dessert />} />
+                        <Route index element={<Cards />} />
                     </Route>
                     <Route path='pizza-Burger'>
                         <Route index element={<Pizzaburger />} />
-                        <Route path='pizza' element={<Pizza />} />
-                        <Route path='burger' element={<Burger />} />
+                        <Route path='pizza' element={<Cards />} />
+                        <Route path='burger' element={<Cards />} />
                     </Route>
                     <Route path='drinks'>
-                        <Route index element={<Drinks />} />
+                        <Route index element={<Cards />} />
                     </Route>
                     <Route path='saucesalad'>
                         <Route index element={<Soucesalad />} />
-                        <Route path='souce' element={<Souce />} />
-                        <Route path='salad' element={<Salad />} />
+                        <Route path='souce' element={<Cards />} />
+                        <Route path='salad' element={<Cards />} />
                     </Route>
                     <Route path=':mID' element={<Aboutmeal />} />
                 </Route>

@@ -8,33 +8,36 @@ import { Grid, Button, CardActionArea, CardActions } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Mysnackbar from './Mysnackbar';
 
-export default function Cards(props) {
+export default function Cards() {
   const [mealDatas, setMealDatas] = useState([]);
   const [statusSnackbar, setStatusSnackbar] = useState(null);
   const [open, setOpen] = React.useState(false);
 
+  const current_url = window.location.href;
   const navigator = useNavigate();
 
   useEffect(() => {
     async function fetchMealData() {
       try {
-        const respond = await axios.get("http://localhost:3000/meals");
-        if (props.AllDatas == 1) {
+        //TODO: Add loading page.
+        const respond = await axios.get("http://localhost:3001/meals");
+
+        if (current_url === "http://localhost:3000/menu/dessert") {
           setMealDatas(respond.data[0].Dessert);
         }
-        else if (props.AllDatas == 2) {
+        else if (current_url === "http://localhost:3000/menu/pizza-Burger/burger") {
           setMealDatas(respond.data[1].Hamburger);
         }
-        else if (props.AllDatas == 3) {
+        else if (current_url === "http://localhost:3000/menu/pizza-Burger/pizza") {
           setMealDatas(respond.data[2].Pizza);
         }
-        else if (props.AllDatas == 4) {
+        else if (current_url === "http://localhost:3000/menu/saucesalad/salad") {
           setMealDatas(respond.data[3].Souce);
         }
-        else if (props.AllDatas == 5) {
+        else if (current_url === "http://localhost:3000/menu/saucesalad/souce") {
           setMealDatas(respond.data[4].Salad);
         }
-        else if (props.AllDatas == 6) {
+        else if (current_url === "http://localhost:3000/menu/drinks") {
           setMealDatas(respond.data[5].Drinks);
         }
         else {
@@ -55,7 +58,7 @@ export default function Cards(props) {
 
   async function addBasket(meal) {
     try {
-      await axios.post("http://localhost:3000/basket", {
+      await axios.post("http://localhost:3001/basket", {
         'name': meal.name,
         'value': meal.value,
         'id': meal.id,
