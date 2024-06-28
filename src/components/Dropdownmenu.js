@@ -2,7 +2,8 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-
+import { store } from '../store/store';
+import { addSomthing } from '../store/actions';
 export default function MenuIntroduction() {
 
   const [status, setStatus] = useState("none");
@@ -14,6 +15,8 @@ export default function MenuIntroduction() {
 
   function onMouseLeaveHandler() {
     setStatus("none");
+    store.dispatch(addSomthing("Test1"))
+    console.log(store.getState());
   }
 
   return (
