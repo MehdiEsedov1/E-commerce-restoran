@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/header.css";
 import logo from "../assets/logo.png";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 

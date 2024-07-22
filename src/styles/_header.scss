@@ -52,11 +52,6 @@
       }
     }
 
-    .logo {
-      width: 60px;
-      height: 60px;
-    }
-
     .side-bar {
       width: 10%;
       display: flex;
@@ -68,4 +63,9 @@
       margin-top: 5px;
     }
   }
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
 }
