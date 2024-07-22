@@ -59,7 +59,7 @@ export default function Basket() {
                 <Grid container
                     sx=
                     {{
-                        marginLeft: "350px",
+                        margin: "auto",
                         marginTop: "50px",
                         width: "80%"
                     }}>

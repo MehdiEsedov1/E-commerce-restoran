@@ -24,8 +24,8 @@
 }
 
 .about-inner p {
+    font-size: 24px;
     font-weight: 500;
     font-family: sans-serif;
-    font-size: 24px;
     color: white;
 }

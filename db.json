@@ -661,5 +661,24 @@
       "id": "da07"
     }
   ],
-  "basket": []
+  "basket": [
+    {
+      "id": "33",
+      "name": "pizza2",
+      "value": "pizza-value2",
+      "photo": "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?size=626&ext=jpg&ga=GA1.1.970409956.1687810194&semt=sph"
+    },
+    {
+      "id": "35",
+      "name": "pizza2",
+      "value": "pizza-value2",
+      "photo": "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?size=626&ext=jpg&ga=GA1.1.970409956.1687810194&semt=sph"
+    },
+    {
+      "id": "39",
+      "name": "pizza2",
+      "value": "pizza-value2",
+      "photo": "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?size=626&ext=jpg&ga=GA1.1.970409956.1687810194&semt=sph"
+    }
+  ]
 }

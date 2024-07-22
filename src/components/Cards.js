@@ -11,7 +11,7 @@ import Mysnackbar from './Mysnackbar';
 export default function Cards() {
   const [mealDatas, setMealDatas] = useState([]);
   const [statusSnackbar, setStatusSnackbar] = useState(null);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const current_url = window.location.href;
   const navigator = useNavigate();
@@ -77,7 +77,7 @@ export default function Cards() {
         <Grid container
           sx=
           {{
-            marginLeft: "350px",
+            margin: "auto",
             marginTop: "50px",
             width: "80%"
           }}>
