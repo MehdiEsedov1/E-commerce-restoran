@@ -1,0 +1,16 @@
+.menu {
+  width: 100%;
+  flex-direction: column;
+  @include flex-center;
+
+  .papers {
+    width: 15rem;
+    height: 80%;
+    background-color: rgb(1, 74, 1) !important;
+    @include flex-center;
+
+    &:hover {
+      background-color: rgb(1, 120, 1) !important;
+    }
+  }
+}

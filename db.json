@@ -663,22 +663,16 @@
   ],
   "basket": [
     {
-      "id": "33",
-      "name": "pizza2",
-      "value": "pizza-value2",
-      "photo": "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?size=626&ext=jpg&ga=GA1.1.970409956.1687810194&semt=sph"
+      "id": "17",
+      "name": "hamburger2",
+      "value": "hamburger-value2",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg"
     },
     {
-      "id": "35",
-      "name": "pizza2",
-      "value": "pizza-value2",
-      "photo": "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?size=626&ext=jpg&ga=GA1.1.970409956.1687810194&semt=sph"
-    },
-    {
-      "id": "39",
-      "name": "pizza2",
-      "value": "pizza-value2",
-      "photo": "https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg?size=626&ext=jpg&ga=GA1.1.970409956.1687810194&semt=sph"
+      "id": "18",
+      "name": "hamburger2",
+      "value": "hamburger-value2",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg"
     }
   ]
 }
