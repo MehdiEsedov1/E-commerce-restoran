@@ -8,7 +8,7 @@ export default function Aboutmeal() {
   const [mealData, setMealData] = useState(null);
 
   async function fetchData() {
-    const respond = await axios("http://localhost:3000/meals");
+    const respond = await axios("http://localhost:3001/meals");
     return respond.data;
   }
 
