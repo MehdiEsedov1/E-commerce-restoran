@@ -11,7 +11,6 @@ import Mysnackbar from "./Mysnackbar";
 export default function Cards() {
   const [mealDatas, setMealDatas] = useState([]);
   const [statusSnackbar, setStatusSnackbar] = useState(null);
-  const [open, setOpen] = useState(false);
 
   const current_url = window.location.href;
   const navigator = useNavigate();
@@ -25,11 +24,11 @@ export default function Cards() {
         if (current_url === "http://localhost:3000/menu/dessert") {
           setMealDatas(respond.data[0].Dessert);
         } else if (
-          current_url === "http://localhost:3000/menu/pizza-Burger/burger"
+          current_url === "http://localhost:3000/menu/pizzaburger/burger"
         ) {
           setMealDatas(respond.data[1].Hamburger);
         } else if (
-          current_url === "http://localhost:3000/menu/pizza-Burger/pizza"
+          current_url === "http://localhost:3000/menu/pizzaburger/pizza"
         ) {
           setMealDatas(respond.data[2].Pizza);
         } else if (
@@ -52,10 +51,6 @@ export default function Cards() {
 
     fetchMealData();
   }, []);
-
-  const handleClick = () => {
-    setOpen(true);
-  };
 
   async function addBasket(meal) {
     try {
@@ -117,7 +112,6 @@ export default function Cards() {
                     <Button
                       onClick={() => {
                         addBasket(meal);
-                        handleClick();
                       }}
                       size="small"
                       style={{ color: "green" }}
@@ -142,7 +136,7 @@ export default function Cards() {
       ) : (
         console.error("mealDatas is empty!!!")
       )}
-      <Mysnackbar status={statusSnackbar} handleClick={handleClick} />
+      <Mysnackbar status={statusSnackbar} />
     </div>
   );
 }

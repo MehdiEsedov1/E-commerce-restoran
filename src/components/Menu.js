@@ -1,14 +1,78 @@
 import { Paper, Stack } from "@mui/material";
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import pizza from "../assets/pizza.png";
-import salad from "../assets/salad.png";
+import React, { useEffect, useState } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import sweets from "../assets/sweets.png";
 import water from "../assets/water.png";
+import saladSouz from "../assets/saladSouz.png";
+import pizzaBurger from "../assets/pizzaBurger.png";
+import pizza from "../assets/pizza.png";
 import burger from "../assets/burger.png";
-import souz from "../assets/souz.png";
+import salad from "../assets/salad.png";
+import souce from "../assets/souz.png";
 
 export default function Menu() {
+  const [menu, setMenu] = useState([]);
+  const location = useLocation();
+
+  let firstMenu = [
+    {
+      to: "dessert",
+      img: sweets,
+      alt: "sweets",
+    },
+    {
+      to: "/menu/pizzaburger",
+      img: pizzaBurger,
+      alt: "pizza-burger",
+    },
+    {
+      to: "/menu/saucesalad",
+      img: saladSouz,
+      alt: "salad-souz",
+    },
+    {
+      to: "/menu/drinks",
+      img: water,
+      alt: "water",
+    },
+  ];
+
+  let secondMenu = [
+    {
+      to: "burger",
+      img: burger,
+      alt: "burger",
+    },
+    {
+      to: "pizza",
+      img: pizza,
+      alt: "pizza",
+    },
+  ];
+
+  let thirdMenu = [
+    {
+      to: "souce",
+      img: souce,
+      alt: "souce",
+    },
+    {
+      to: "salad",
+      img: salad,
+      alt: "salad",
+    },
+  ];
+
+  useEffect(() => {
+    if (location.pathname === "/menu") {
+      setMenu(firstMenu);
+    } else if (location.pathname === "/menu/saucesalad") {
+      setMenu(thirdMenu);
+    } else if (location.pathname === "/menu/pizzaburger") {
+      setMenu(secondMenu);
+    }
+  }, [location]);
+
   return (
     <div className="menu">
       <Stack
@@ -19,30 +83,15 @@ export default function Menu() {
           marginTop: "50px",
         }}
       >
-        <Link to="dessert">
-          <Paper className="papers">
-            <img className="logo" src={sweets} alt="sweets" />
-          </Paper>
-        </Link>
-        <Link to="/menu/pizza-Burger">
-          <Paper className="papers">
-            <div>
-              <img className="logo" src={pizza} alt="pizza" />
-              <img className="logo" src={burger} alt="burger" />
-            </div>
-          </Paper>
-        </Link>
-        <Link to="/menu/saucesalad">
-          <Paper className="papers">
-            <img className="logo" src={salad} alt="salad" />
-            <img className="logo" src={souz} alt="souz" />
-          </Paper>
-        </Link>
-        <Link to="/menu/drinks">
-          <Paper className="papers">
-            <img className="logo" src={water} alt="water" />
-          </Paper>
-        </Link>
+        {menu.map((item, index) => {
+          return (
+            <Link key={index} to={item.to}>
+              <Paper className="papers">
+                <img className="logo" src={item.img} alt={item.alt} />
+              </Paper>
+            </Link>
+          );
+        })}
       </Stack>
       <Outlet />
     </div>
