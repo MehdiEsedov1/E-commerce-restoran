@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import Dropdownmenu from "./Dropdownmenu.js";
 export default function Header() {
   return (
     <div className="header">
@@ -16,7 +15,6 @@ export default function Header() {
           <Link to="/about">ABOUT</Link>
         </div>
         <div className="side-bar">
-          <Dropdownmenu />
           <Link to="/basket">
             <ShoppingBasketIcon
               sx={{

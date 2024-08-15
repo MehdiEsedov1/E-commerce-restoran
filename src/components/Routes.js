@@ -5,9 +5,6 @@ import About from "../components/About";
 import Basket from "../components/Basket";
 import Aboutmeal from "./AboutMeal";
 import Error from "../components/Error";
-import Signup from "./registration/SignUp";
-import Login from "./registration/LogIn";
-import Profile from "./Profile";
 import Cards from "./Cards";
 import { Route, Routes } from "react-router-dom";
 
@@ -38,9 +35,6 @@ export default function Routess() {
         </Route>
         <Route path="/about" element={<About />} />
         <Route path="/basket" element={<Basket />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
