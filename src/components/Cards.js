@@ -59,6 +59,7 @@ export default function Cards() {
         value: meal.value,
         id: meal.id,
         photo: meal.photo,
+        count: 1,
       });
       setStatusSnackbar(true);
     } catch (error) {

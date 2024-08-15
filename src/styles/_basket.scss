@@ -1,7 +1,42 @@
-.count-changer-container {
-  display: flex;
+.basket-container {
+  .total-price-container {
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    border-left: 5px $dark-green solid;
+    border-right: 5px $dark-green solid;
+    border-bottom: 5px $dark-green solid;
+    @include flex-center;
+    margin: auto;
 
-  .changer {
-    background-color: green;
+    .total-price {
+      font-size: 36px;
+      font-weight: bold;
+      color: $dark-green;
+    }
+  }
+
+  .count-changer-container {
+    display: flex;
+
+    .changer {
+      width: 30px;
+      height: 25px;
+      background-color: $dark-green;
+      border-radius: 3px;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      @include flex-center;
+    }
+
+    .value {
+      width: 30px;
+      height: 25px;
+      @include flex-center;
+    }
   }
 }
