@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 export default function Basket() {
   const [mealDatas, setMealDatas] = useState([]);
   const [deleteStatus, setDeleteStatus] = useState(true);
+  const [mealCount, setMealCount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const navigator = useNavigate();
 
@@ -20,7 +22,17 @@ export default function Basket() {
     }
 
     getMealFromBaskter();
-  }, [deleteStatus]);
+  }, [deleteStatus, mealCount]);
+
+  useEffect(() => {
+    let totalValue = 0;
+
+    mealDatas.forEach((item) => {
+      totalValue += item.count * item.value;
+    });
+
+    setTotalPrice(totalValue);
+  }, [mealDatas]);
 
   async function deleteFromBasket(id) {
     await axios.delete(`http://localhost:3001/basket/${id}`);
@@ -31,14 +43,29 @@ export default function Basket() {
     }
   }
 
-  async function handleClick(enteredNumbers, meal) {
-    await axios.patch(`http://localhost:3001/basket/1`, {
-      count: enteredNumbers[meal.id],
+  async function valueChanger(count, meal) {
+    await axios.patch(`http://localhost:3001/basket/${meal.id}`, {
+      count: count,
     });
   }
 
+  function handleValueIncreaser(meal) {
+    valueChanger(meal.count + 1, meal);
+    setMealCount(mealCount + 1);
+  }
+
+  function handleValueDecreaser(meal) {
+    if (meal.count > 1) {
+      valueChanger(meal.count - 1, meal);
+      setMealCount(mealCount - 1);
+    }
+  }
+
   return (
-    <div>
+    <div className="basket-container">
+      <div className="total-price-container">
+        <p className="total-price">Total price : {totalPrice}$</p>
+      </div>
       {mealDatas.length > 0 ? (
         <Grid
           container
@@ -80,17 +107,25 @@ export default function Basket() {
                   </CardActionArea>
                   <CardActions>
                     <div className="count-changer-container">
-                      <button className="changer">+</button>
-                      <div>1</div>
-                      <button className="changer">-</button>
+                      <button
+                        className="changer"
+                        onClick={() => {
+                          handleValueIncreaser(meal);
+                        }}
+                      >
+                        +
+                      </button>
+                      <div className="value">{meal.count}</div>
+                      <button
+                        className="changer"
+                        onClick={() => {
+                          handleValueDecreaser(meal);
+                        }}
+                      >
+                        -
+                      </button>
                     </div>
-                    <Button
-                      onClick={() => {
-                        handleClick(enteredNumbers, meal.id);
-                      }}
-                      size="small"
-                      style={{ color: "green" }}
-                    >
+                    <Button size="small" style={{ color: "green" }}>
                       Buy
                     </Button>
                     <Button

@@ -6,11 +6,11 @@
   .papers {
     width: 15rem;
     height: 80%;
-    background-color: rgb(1, 74, 1) !important;
+    background-color: $dark-green !important;
     @include flex-center;
 
     &:hover {
-      background-color: rgb(1, 120, 1) !important;
+      background-color: $normal-green !important;
     }
   }
 }
