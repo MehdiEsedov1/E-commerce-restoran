@@ -66,6 +66,14 @@ export default function Basket() {
       <div className="total-price-container">
         <p className="total-price">Total price : {totalPrice}$</p>
       </div>
+      <button
+        className="order-button"
+        onClick={() => {
+          navigator("/payment");
+        }}
+      >
+        order
+      </button>
       {mealDatas.length > 0 ? (
         <Grid
           container
