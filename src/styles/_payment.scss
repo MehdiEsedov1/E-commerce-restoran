@@ -1,0 +1,99 @@
+.payment {
+  width: 100%;
+  height: 94.35vh;
+  background-color: $normal-green;
+  @include flex-center;
+
+  form {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 60vh;
+    background-color: white;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 15px;
+
+    .personal-info {
+      width: 40%;
+    }
+
+    .card-info {
+      width: 40%;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding-left: 10px;
+      font-size: 1.5rem;
+      border: none;
+      border-bottom: $normal-green 2px solid;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .payment-checkbox-container {
+    display: flex;
+    width: 70%;
+    height: 30px;
+
+    input {
+      width: 20px !important;
+      height: 20px !important;
+
+      &:checked {
+        background-color: $normal-green;
+      }
+    }
+  }
+
+  .payment-inputs-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .payment-buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 150px;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+
+  button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.75rem;
+    color: white;
+    background-color: $normal-green;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $light-green;
+    }
+  }
+
+  p {
+    color: black;
+    margin-left: 20px;
+    margin-top: 3px;
+    font-size: 1rem;
+  }
+
+  ::placeholder {
+    font-size: 1rem;
+    color: black;
+    font-weight: 500;
+  }
+}

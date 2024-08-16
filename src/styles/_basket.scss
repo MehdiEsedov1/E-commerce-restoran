@@ -1,4 +1,6 @@
 .basket-container {
+  width: 100%;
+
   .total-price-container {
     width: 300px;
     height: 50px;
@@ -16,6 +18,20 @@
       font-weight: bold;
       color: $dark-green;
     }
+  }
+
+  .order-button {
+    width: 175px;
+    height: 50px;
+    background-color: $dark-green;
+    border-radius: 6px;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    @include flex-center;
+    margin: auto !important;
+    margin-top: 10px !important;
   }
 
   .count-changer-container {

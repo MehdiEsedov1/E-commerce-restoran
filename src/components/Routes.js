@@ -7,6 +7,7 @@ import Aboutmeal from "./AboutMeal";
 import Error from "../components/Error";
 import Cards from "./Cards";
 import { Route, Routes } from "react-router-dom";
+import Payment from "./Payment";
 
 export default function Routess() {
   return (
@@ -35,6 +36,7 @@ export default function Routess() {
         </Route>
         <Route path="/about" element={<About />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
