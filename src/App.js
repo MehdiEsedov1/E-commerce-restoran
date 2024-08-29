@@ -4,8 +4,7 @@ import Header from "./components/Header";
 import Routess from "./components/Routes";
 
 function App() {
-  console.log("t");
-  console.log("t");
+  console.log("Test");
   return (
     <div className="App">
       <Header />
